@@ -1,5 +1,6 @@
 module "resource_group" {
-  source = "github.com/cloud-native-toolkit/terraform-ibm-resource-group.git"
+  source = "./module"
 
-  resource_group_name = var.new_resource_group
+  resource_group_name = "test-resource-group"
+  
 }
