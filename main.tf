@@ -112,7 +112,7 @@ resource ibm_iam_access_group_policy security_policy_2 {
 
 resource ibm_iam_access_group_policy security_policy_3 {
   access_group_id = ibm_iam_access_group.security_admins.id
-  roles           = ["Administrator", "UserApiKeyCreator", "ServiceIdCreator"]
+  roles           = ["Administrator", "User API key creator", "Service ID creator"]
   resources {
     service = "iam-identity"
   }
