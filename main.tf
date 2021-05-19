@@ -83,9 +83,6 @@ resource ibm_iam_access_group_policy network_policy_1 {
 resource ibm_iam_access_group_policy network_policy_2 {
   access_group_id = ibm_iam_access_group.network_admins.id
   roles           = ["Viewer"]
-  resources {
-    service = "iam-groups"  
-  }
 }
 
 resource ibm_iam_access_group_policy network_policy_3 {
@@ -115,9 +112,11 @@ resource ibm_iam_access_group_policy security_policy_2 {
 
 resource ibm_iam_access_group_policy security_policy_3 {
   access_group_id = ibm_iam_access_group.security_admins.id
-  roles           = ["Administrator", "Manager"]  
+  roles           = ["Administrator", "UserApiKeyCreator", "ServiceIdCreator"]
+  resources {
+    service = "iam-identity"
+  }
 }
-
 
 resource ibm_iam_access_group_policy security_policy_4 {
   access_group_id = ibm_iam_access_group.security_admins.id
