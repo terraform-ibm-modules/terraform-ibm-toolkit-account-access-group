@@ -1,12 +1,13 @@
 # IBM Cloud Access Group creation module
 
-Terraform module to provision ADMIN, EDIT, and VIEW access groups for the resource groups provided. The resource groups are optionally created as well.
+Terraform module to provision account-wide access groups in accordance FS cloud recommendations. In all, six access groups are created by this module:
 
-The access group names are generated based on the resource group name under the following formatting rules:
-
-- All upper case letters
-- Dashes (-) replaced with underscores (_)
-- Suffix of either `_ADMIN`, `_EDIT`, or `_VIEW`
+- CLOUD_ORGANIZATION_ADMINS
+- CLOUD_NETWORK_ADMINS
+- CLOUD_SECURITY_ADMINS
+- CLOUD_BILLING_ADMINS
+- CLOUD_DEVOPS
+- CLOUD_DEVELOPERS
 
 ## Software dependencies
 
@@ -26,6 +27,6 @@ The module depends on the following software components:
 module "access_groups" {
   source = "github.com/ibm-garage-cloud/terraform-ibm-account-access-group.git?ref=v1.0.0"
   
-  resource_group_name  = module.resource_group.name
+  ibmcloud_api_key = var.ibmcloud_api_key
 }
 ```

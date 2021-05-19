@@ -1,18 +1,12 @@
-name: ""
+name: ibm-account-access-group
 type: terraform
-description: ""
+description: Module to provision account-wide access groups for an FS-enabled account
 tags:
-    - tools
-    - devops
+    - account
+    - access group
 versions:
-- platforms:
-  dependencies:
-    - id: resource_group
-      refs:
-        - source: github.com/cloud-native-toolkit/terraform-ibm-resource-group
-          version: ">= 2.1.0"
+- platforms: []
+  dependencies: []
   variables:
-    - name: resource_group_name
-      moduleRef:
-        id: resource_group
-        output: name
+    - name: ibmcloud_api_key
+      scope: global
