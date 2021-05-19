@@ -1,11 +1,19 @@
 id: github.com/cloud-native-toolkit/terraform-ibm-account-access-group
-name: ""
+name: ibm-account-access-group
 type: terraform
-description: ""
+description: Module to provision account-wide access groups for an FS-enabled account
 tags:
-  - tools
-  - devops
+  - account
+  - access group
 versions:
+  - platforms: []
+    dependencies: []
+    variables:
+      - name: ibmcloud_api_key
+        scope: global
+        type: string
+        description: The api key for IBM Cloud access
+    version: v1.0.0
   - platforms:
       - kubernetes
       - ocp3
@@ -27,28 +35,3 @@ versions:
     #          version: ">= 1.6.0"
     variables: []
     version: v0.0.0
-#    - name: cluster_type
-#      moduleRef:
-#        id: cluster
-#        output: type_code
-#    - name: cluster_ingress_hostname
-#      moduleRef:
-#        id: cluster
-#        output: ingress_hostname
-#    - name: cluster_config_file
-#      moduleRef:
-#        id: cluster
-#        output: config_file_path
-#    - name: tls_secret_name
-#      moduleRef:
-#        id: cluster
-#        output: tls_secret_name
-#    - name: releases_namespace
-#      moduleRef:
-#        id: namespace
-#        output: name
-#        discriminator: tools
-#    - name: icon_url
-#      moduleRef:
-#        id: dashboard
-#        output: base_icon_url
