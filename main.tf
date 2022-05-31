@@ -104,7 +104,7 @@ resource ibm_iam_access_group_policy security_policy_1 {
 
 resource ibm_iam_access_group_policy security_policy_2 {
   access_group_id = ibm_iam_access_group.security_admins.id
-  roles           = ["Editor", "ServiceEditor"]
+  roles           = ["Editor", "Administrator"]
   resources {
     service = "compliance"  
   }
