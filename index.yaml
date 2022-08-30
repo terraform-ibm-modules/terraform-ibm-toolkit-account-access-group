@@ -1,4 +1,4 @@
-id: github.com/cloud-native-toolkit/terraform-ibm-account-access-group
+id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-account-access-group
 name: ibm-account-access-group
 type: terraform
 description: Module to provision account-wide access groups for an FS-enabled account
@@ -6,6 +6,14 @@ tags:
   - account
   - access group
 versions:
+  - platforms: []
+    providers:
+      - name: ibm
+        source: ibm-cloud/ibm
+    dependencies: []
+    variables: []
+    version: v1.1.2
+    outputs: []
   - platforms: []
     providers:
       - name: ibm
