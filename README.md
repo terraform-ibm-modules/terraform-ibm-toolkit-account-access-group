@@ -9,7 +9,6 @@ Terraform module to provision account-wide access groups in accordance FS cloud 
 - CLOUD_DEVOPS
 - CLOUD_DEVELOPERS
 
-**Note:** This module follows the Terraform conventions regarding how provider configuration is defined within the Terraform template and passed into the module - https://www.terraform.io/docs/language/modules/develop/providers.html. The default provider configuration flows through to the module. If different configuration is required for a module, it can be explicitly passed in the `providers` block of the module - https://www.terraform.io/docs/language/modules/develop/providers.html#passing-providers-explicitly.
 
 ## Software dependencies
 
@@ -24,6 +23,7 @@ The module depends on the following software components:
 - IBM Cloud provider >= 1.5.3
 
 ## Example usage
+[Refer the test cases for more details](test/stages/stage2-access-group.tf)
 
 ```hcl-terraform
 terraform {
